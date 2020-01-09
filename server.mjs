@@ -83,6 +83,14 @@ export function hideChat(player) {
  *  Utilities
  */
 
+onCommand('help', (player) => {
+    output(player, `{0099ff}[ List of commands ]`);
+    registeredCommands.forEach((c) => {
+        const [ command, _, __, description ] = c;
+        output(player, `{80ccff}${command}{b3e0ff} - ${description}`);
+    });
+}, 0, 'List of commands');
+
 function split(s, separator, limit) {
     // split the initial string using limit
     var arr = s.split(separator, limit);
