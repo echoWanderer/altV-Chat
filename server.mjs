@@ -47,20 +47,23 @@ function executeCommand(player, input) {
         }
     });
 
-    if(!commandExists) outputMessage(player, '{FF0000}> Unknown command!');
+    if(!commandExists) output(player, '{FF0000}> Unknown command!');
 }
 
 function showCommandInfoMessage(player, command, description, args) {
-    outputMessage(player, `{333333}> USAGE: {222222}/${command} ${args}`);
-    if (description) outputMessage(player, `{222222}> ${description}`);
+    if (args)
+        output(player, `{777777}USAGE: {555555}/${command} ${args}`);
+    else
+        output(player, `{777777}USAGE: {555555}/${command}`);
+
+    if (description) output(player, `{555555}> ${description}`);
 }
 
-export function onCommand(command, argumentsCount, callback, description, usage) {
+export function onCommand(command, argumentsCount, callback, description, usage = undefined) {
     registeredCommands.push([command, argumentsCount, callback, description, usage]);
-    alt.emitClient(null, 'chat:addCommandToChatList', command, description);
 }
 
-export function outputMessage(player, text) {
+export function output(player, text) {
 	alt.emitClient(player, 'addChatMessage', text);
 }
 
