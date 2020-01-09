@@ -25,11 +25,16 @@ function executeCommand(player, input) {
 
         if (command === userCommand) {
             commandExists = true;
+            if (requiredArgumentsCount === 0) return callback(player);
+
             if (hasArguments) {
                 // Take all input and split it into array
                 let specifiedArguments = split(input, ' ', requiredArgumentsCount);
+                console.log(specifiedArguments);
                 // Remove command text from an array
                 specifiedArguments.shift();
+
+                console.log(specifiedArguments);
                 
                 // Check if has all required arguments
                 if (specifiedArguments.indexOf('') === -1) {
