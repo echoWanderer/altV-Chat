@@ -6,7 +6,7 @@
 *This content is not affiliated with alt:MP Team.*
 
 ## Features
-* **Resource Update Control** - Get a message to your server's console when new update is out!
+* **Resource Update Control** - Get a message to your server's console when a new update is out!
 * Global and player-based messages
 * Colored messages
 * Commands handling
