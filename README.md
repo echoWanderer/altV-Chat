@@ -19,7 +19,7 @@ This resource is not official Alt:V chat resource.
 ![](https://i.ibb.co/mtHmz5s/3.png)
 ![](https://i.ibb.co/wKBJp0T/4.png)
 ![](https://i.ibb.co/q0MQ55s/5.png)
-![](https://i.ibb.co/tHbpHRH/6.png)
+![](https://i.ibb.co/T8sT37f/7.png)
 
 ## How to use
 
