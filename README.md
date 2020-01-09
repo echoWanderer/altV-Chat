@@ -1,4 +1,4 @@
-# Alt:V Chat
+# alt:V Chat `community made`
 **This resource still needs testing and improving. It's not ready to use in production.**
 
 *Your contribution would be very appreciated! Please look for **Known issues** at the bottom of the page.*
