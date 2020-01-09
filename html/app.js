@@ -26,6 +26,7 @@ let historySave;
 // Call an event after chat window was loaded
 window.onload = (() => {
     alt.emit('onChatLoaded');
+    addMessage(onLoadMessage);
 });
 
 // Hide chat input if player clicks anywhere but input
