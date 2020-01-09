@@ -103,7 +103,8 @@ function split(s, separator, limit) {
 
 /**
  * 
- *  Resource Update Control
+ *  Resource Version Control
+ *  Please do not co-... meh, you won't listen anyway.
  * 
  */
 
@@ -120,12 +121,15 @@ _w_fetch('https://raw.githubusercontent.com/echoWanderer/altV-Chat/master/meta.j
     .then((json) => {
         const repoVersion = json.version;
         const curVersion = _w_meta.version;
-        
         if(curVersion !== repoVersion) {
             _w_interval = setInterval(() => {
                 alt.logWarning(`\nChat resource has been updated!\nNew version: ${repoVersion} | Current version: ${curVersion}\nPlease update it with git or download as a package from https://github.com/echoWanderer/altV-Chat\n`);
                 _w_msgs++;
                 if(_w_msgs > 5) clearInterval(_w_interval);
             }, 30000);
+        } else {
+            alt.log('[CHAT] Loaded alt:V Chat resource - using latest version.')
         }
     }).catch();
+
+alt.on('')
