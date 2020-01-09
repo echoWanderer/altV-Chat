@@ -7,6 +7,7 @@
 
 ## Features
 * **Resource Update Control** - Get a message to your server's console when a new update is out!
+![](https://i.ibb.co/C7dFgfk/rvc.png)
 * Global and player-based messages
 * Colored messages
 * Commands handling
