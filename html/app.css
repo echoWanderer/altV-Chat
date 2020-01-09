@@ -1,0 +1,120 @@
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+*:focus {
+    outline: none;
+}
+
+::-moz-selection { background: rgba(0, 0, 0, 0.5); }
+::selection { background: rgba(0, 0, 0, 0.5); }
+
+body {
+    /* background-image: url('https://i.ytimg.com/vi/WKRGIiD3SOc/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+.chat {
+    margin: 5px 0 0 5px;
+    height: 100%;
+    min-height: 170px;
+    max-height: 25%;
+    width: 100%;
+    min-width: 400px;
+    max-width: 40%;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.chatBox {
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+.chatMessage {
+    word-wrap: break-word;
+}
+
+.chatInput {
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    width: 100%;
+    color: #fff;
+    visibility: visible;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.075s linear;
+}
+
+.chatInputInfo {
+    color: #fff;
+    font-size: 10px;
+    visibility: visible;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.075s linear;
+}
+
+.chatInputInfo span {
+    display: inline;
+}
+
+.chatCommandsList {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 11px;
+    visibility: visible;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.075s linear;
+}
+
+.chatCommandsList td {
+    padding: 5px;
+}
+
+.chatCommandsList td.command {
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.disableSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.addShadow {
+    text-shadow:
+    1px  1px 2px black,
+    1px -1px 2px black,
+   -1px  1px 2px black,
+   -1px -1px 2px black;
+}
