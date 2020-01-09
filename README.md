@@ -1,7 +1,8 @@
-# alt:V Chat `community made`
+# alt:V Chat
 **This resource still needs testing and improving. It's not ready to use in production.**
 
 *Your contribution would be very appreciated! Please look for **Known issues** at the bottom of the page.*
+*This content is not affiliated with alt:MP Team.*
 
 ## Features
 * Global and player-based messages
