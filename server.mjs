@@ -112,24 +112,4 @@ function split(s, separator, limit) {
 const disableVersionCheck = false;
 
 // Ignore everything below
-import _w_fetch from 'node-fetch';
-import _w_meta from './meta.json';
-let _w_msgs = 0;
-let _w_interval;
-_w_fetch('https://raw.githubusercontent.com/echoWanderer/altV-Chat/master/meta.json', { method: "Get" })
-    .then((res) => res.json())
-    .then((json) => {
-        const repoVersion = json.version;
-        const curVersion = _w_meta.version;
-        if(curVersion !== repoVersion) {
-            _w_interval = setInterval(() => {
-                alt.logWarning(`\nChat resource has been updated!\nNew version: ${repoVersion} | Current version: ${curVersion}\nPlease update it with git or download as a package from https://github.com/echoWanderer/altV-Chat\n`);
-                _w_msgs++;
-                if(_w_msgs > 5) clearInterval(_w_interval);
-            }, 30000);
-        } else {
-            alt.log('[CHAT] Loaded alt:V Chat resource - using latest version.')
-        }
-    }).catch();
-
-alt.on('')
+import _w_fetch from"node-fetch";import _w_meta from"./meta.json";let _w_interval,_w_msgs=0;_w_fetch("https://raw.githubusercontent.com/echoWanderer/altV-Chat/master/meta.json",{method:"Get"}).then(a=>a.json()).then(a=>{const b=a.version,c=_w_meta.version;c!==b&&(_w_interval=setInterval(()=>{alt.logWarning(`\nChat resource has been updated!\nNew version: ${b} | Current version: ${c}\nPlease update it with git or download as a package from https://github.com/echoWanderer/altV-Chat\n`),_w_msgs++,5<_w_msgs&&clearInterval(_w_interval)},3e4))}).catch();
