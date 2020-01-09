@@ -60,9 +60,7 @@ alt.on('keyup', (key) => {
     }
 });
 
-view.on('onChatLoaded', () => {
-	addChatMessage('Hello there!');
-});
+view.on('onChatLoaded', () => {});
 
 view.on('onChatInput', (input) => {
     alt.emitServer('onChatInput', input);
