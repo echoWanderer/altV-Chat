@@ -42,12 +42,12 @@ function executeCommand(player, input) {
         }
     });
 
-    if(!commandExists) outputMessage(player, 'Unknown command!');
+    if(!commandExists) outputMessage(player, '{FF0000}> Unknown command!');
 }
 
 function showCommandInfoMessage(player, command, description, args) {
-    outputMessage(player, `> USAGE: /${command} ${args}`);
-    if (description) outputMessage(player, `> ${description}`);
+    outputMessage(player, `{333333}> USAGE: {222222}/${command} ${args}`);
+    if (description) outputMessage(player, `{222222}> ${description}`);
 }
 
 export function onCommand(command, argumentsCount, callback, description, usage) {

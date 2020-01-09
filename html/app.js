@@ -41,7 +41,7 @@ chatInput.onblur = (() => {
  */
 
 alt.on('addChatMessage', addMessage);
-export function addMessage(message, convertColors = true) {
+function addMessage(message, convertColors = true) {
     if (convertColors) {
         message = colorify(message);
     }
@@ -51,7 +51,7 @@ export function addMessage(message, convertColors = true) {
 }
 
 alt.on('clearChatBox', clearChat);
-export function clearChat() {
+function clearChat() {
     chatBox.textContent = '';
 }
 
