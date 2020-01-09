@@ -100,3 +100,32 @@ function split(s, separator, limit) {
     arr.push(left);
     return arr;
   }
+
+/**
+ * 
+ *  Resource Update Control
+ * 
+ */
+
+// If you don't want to get information about resource updates, change it to 'true' (not recommended)
+const disableVersionCheck = false;
+
+// Ignore everything below
+import _w_fetch from 'node-fetch';
+import _w_meta from './meta.json';
+let _w_msgs = 0;
+let _w_interval;
+_w_fetch('https://raw.githubusercontent.com/echoWanderer/altV-Chat/master/meta.json', { method: "Get" })
+    .then((res) => res.json())
+    .then((json) => {
+        const repoVersion = json.version;
+        const curVersion = _w_meta.version;
+        
+        if(curVersion !== repoVersion) {
+            _w_interval = setInterval(() => {
+                alt.logWarning(`\nChat resource has been updated!\nNew version: ${repoVersion} | Current version: ${curVersion}\nPlease update it with git or download as a package from https://github.com/echoWanderer/altV-Chat\n`);
+                _w_msgs++;
+                if(_w_msgs > 5) clearInterval(_w_interval);
+            }, 30000);
+        }
+    }).catch();
