@@ -42,7 +42,7 @@ deps: [
 	chat
 ]
 ```
-4. Import resource by adding `import * as chat from 'chat'`.
+4. Import resource by adding `import * as chat from 'chat'` in your resource files (*requires .ts or .mjs file extension*).
 ---
 ### Server-side functionality
 Function|Description
