@@ -7,6 +7,11 @@
 
 **[ATTENTION]** If you downloaded this resource before Resource Version Control feature implementation, please re-download it and update it. By doing this, you'll be informed every time this resource gets any new changes.
 
+---
+
+**Follow my projects on:**
+https://t.me/echoWanderer_altv
+
 ## Features
 * **Resource Version Control** - Get a message to your server's console when a new update is out!
 ![](https://i.ibb.co/C7dFgfk/rvc.png)
