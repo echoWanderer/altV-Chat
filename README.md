@@ -42,6 +42,7 @@ deps: [
 	chat
 ]
 ```
+4. Import resource by adding `import * as chat from 'chat'`.
 ---
 ### Server-side functionality
 Function|Description
