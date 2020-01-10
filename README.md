@@ -5,8 +5,10 @@
 
 *This content is not affiliated with alt:MP Team.*
 
+**[ATTENTION]** If you downloaded this resource before Resource Version Control feature implementation, please re-download it and update it. By doing this, you'll be informed every time this resource gets any new changes.
+
 ## Features
-* **Resource Update Control** - Get a message to your server's console when a new update is out!
+* **Resource Version Control** - Get a message to your server's console when a new update is out!
 ![](https://i.ibb.co/C7dFgfk/rvc.png)
 * Global and player-based messages
 * Colored messages
