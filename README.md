@@ -8,8 +8,8 @@
 ---
 
 **Useful links**
-[Resource Changelog](https://github.com/echoWanderer/altV-Chat/blob/master/CHANGELOG.md)
-[Get all updates on Telegram](https://t.me/echoWanderer_altv)
+* [Resource Changelog](https://github.com/echoWanderer/altV-Chat/blob/master/CHANGELOG.md)
+* [Get all updates on Telegram](https://t.me/echoWanderer_altv)
 
 # Features
 * **Resource Version Control** - Get a message to your server's console when a new update is out!
