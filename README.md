@@ -17,11 +17,12 @@ https://t.me/echoWanderer_altv
 ![](https://i.ibb.co/C7dFgfk/rvc.png)
 * Global and player-based messages
 * Colored messages
-* Icons
+* Icons ([Foundation Icons](https://zurb.com/playground/foundation-icon-fonts-3))
 * Gradient message background
 * Commands handling
 * Toggle-able chat box visibility
-* Messages history (scrolling with Arrow keys)
+* Sent messages history (scrolling with *Arrow Up/Down* keys)
+* Chat history with *Page Up/Down* keys
 * Dynamic message length counter
 * Built-in */help* command
 
