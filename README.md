@@ -1,9 +1,9 @@
 # alt:V Chat
 **This resource still needs testing and improving. It's not ready to use in production.**
 
-*Your contribution would be very appreciated! Please look for **Known issues** at the bottom of the page.*
-
 *This content is not affiliated with alt:MP Team.*
+
+**[ATTENTION]** After next update (1.0.0) resource will be no longer actively developed. You can still make this resource better by contributing it as pull request will be maintained after all.
 
 ---
 
