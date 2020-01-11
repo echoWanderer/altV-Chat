@@ -13,9 +13,6 @@ webview.focus();
 webview.on('chat:onLoaded', () => {
     activateChat(true);
     push('Connected to the server', 'limegreen', [0, 190, 0], 'check')
-
-    for(let i = 0; i < 12; i++)
-        push(`i: ${i}`);
 });
 
 webview.on('chat:onInputStateChange', state => {
@@ -29,28 +26,46 @@ webview.on('chat:onChatStateChange', state => {
     chatActive = state;
 });
 
-webview.on('chat:onInput', message => {
-    alt.emitServer('chat:onInput', message);
+webview.on('chat:onInput', text => {
+    alt.emitServer('chat:onInput', (text[0] === '/') ? true : false, text);
 });
 
-alt.onServer('chat:sendMessage', (sender, message) => {
-    push(`${sender} says: ${message}`);
+alt.onServer('chat:sendMessage', (sender, text) => {
+    push(`${sender} says: ${text}`);
+});
+
+alt.onServer('chat:showMessage', (text, color, gradient, icon) => {
+    push(text, color, gradient, icon);
+});
+
+alt.onServer('chat:activateChat', state => {
+    activateChat(state);
 });
 
 export function push(text, color = 'white', gradient = false, icon = false) {
     webview.emit('chat:pushMessage', text, color, gradient, icon);
 }
 
-export function icon(name, paddingLeft = 0, paddingRight = 0) {
-    webview.emit('chat:insertIcon', name, paddingLeft, paddingRight);
+// Backwards compatibility until next update
+export function addChatMessage(...args) {
+    alt.logWarning('Chat function "addChatMessage" is deprecated. Consider using "push" as old one will be removed after next update.');
+    push(...args);
 }
 
 export function activateChat(state) {
     webview.emit('chat:activateChat', state);
 }
 
-export function activateInput(state) {
-    webview.emit('chat:activateInput', state);
+// Backwards compatibility until next update
+export function showChat() {
+    alt.logError('Chat function "showChat" is deprecated. Consider using "activateChat" as old one will be removed after next update. Function was not called!');
+    push('Check you console!', 'red');
+}
+
+// Backwards compatibility until next update
+export function hideChat() {
+    alt.logError('Chat function "hideChat" is deprecated. Consider using "activateChat" as old one will be removed after next update. Function was not called!');
+    push('Check you console!', 'red');
 }
 
 
@@ -99,6 +114,10 @@ function scrollMessagesList(direction) {
     scrollActive = true;
     alt.setTimeout(() => scrollActive = false, 250 + 5);
     webview.emit('chat:scrollMessagesList', direction);
+}
+
+function activateInput(state) {
+    webview.emit('chat:activateInput', state);
 }
 
 function sendInput() {
