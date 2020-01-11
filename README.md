@@ -33,7 +33,7 @@ https://t.me/echoWanderer_altv
 ## How to use
 
 You can find all information on wiki page:
-(Main wiki page)[wiki]
+[Main Wiki page](wiki)
 
 ## Known Issues
 1. There is some lag between events, you can see warning messages in server and client console:
