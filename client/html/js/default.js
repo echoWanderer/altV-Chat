@@ -17,7 +17,7 @@ var chatNewMessagesWarning = $('.chat-box .chat-new-messages-warning');
 
 // Initiation
 $(document).ready(() => {
-    const messagesListHeight = _MAX_MESSAGES_ON_CHAT * 22.5 - 1;
+    const messagesListHeight = _MAX_MESSAGES_ON_CHAT * 22.5;
     const chatBoxHeight = messagesListHeight + 50;
 
     chatBox.css('height', chatBoxHeight + 'px');
@@ -26,6 +26,8 @@ $(document).ready(() => {
 if (_HIDE_INPUT_BAR_ON_BLUR) $(chatInputBar).focusout(() => inputActive && toggleInputBar(false));
 chatMessagesList.bind('mousewheel DOMMouseScroll', (e) => e.preventDefault());
 chatInputBar.bind('propertychange change click keyup input paste', () => inputActive && countInputBarLength());
+
+setInterval(() => console.log(getScrolledUpMessagesAmount()), 250);
 
 // Functions - Actions
 function pushMessage(text, color = 'white', gradient = false, icon = false) {
@@ -42,21 +44,23 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
 
     chatMessagesList.append(`<div class="chat-message" style="${style}">${text}</div>`);
 
-    (!isMessageListScrolledUp()) ? scrollMessagesList('bottom') : toggleWarningText(true);
+    (getScrolledUpMessagesAmount() >= 4) ? toggleWarningText(true) : scrollMessagesList('bottom');
 }
 
 function scrollMessagesList(direction) {
     if (scrollActive) return;
 
     scrollActive = true;
-    setTimeout(() => scrollActive = false, _SCROLL_TIME);
+    setTimeout(() => scrollActive = false, _SCROLL_TIME + 5);
+
+    const pixels = 22.5 * 5;
 
     switch (direction) {
         case 'up':
-            chatMessagesList.stop().animate({ scrollTop: '-=90px' }, _SCROLL_TIME);
+            chatMessagesList.stop().animate({ scrollTop: `-=${pixels}px` }, _SCROLL_TIME);
             break;
         case 'down':
-            chatMessagesList.stop().animate({ scrollTop: '+=90px' }, _SCROLL_TIME);
+            chatMessagesList.stop().animate({ scrollTop: `+=${pixels}px` }, _SCROLL_TIME);
             break;
         case 'bottom':
             chatMessagesList.stop().animate({ scrollTop: chatMessagesList.prop('scrollHeight') }, _SCROLL_TIME);
@@ -64,7 +68,7 @@ function scrollMessagesList(direction) {
     }
 
     setTimeout(() => {
-        if (!isMessageListScrolledUp()) toggleWarningText(false);
+        if (getScrolledUpMessagesAmount() == 0) toggleWarningText(false);
     }, _SCROLL_TIME);
 }
 
@@ -118,9 +122,9 @@ function countInputBarLength() {
 
 // Functions - Checks
 
-function isMessageListScrolledUp() {
-    const difference = chatMessagesList.prop('scrollHeight') - chatMessagesList.scrollTop() - _MAX_MESSAGES_ON_CHAT * 22.5;
-    return (difference > 22.5 * 0.75) ? true : false;
+function getScrolledUpMessagesAmount() {
+    const amount = Math.round((chatMessagesList.prop('scrollHeight') - chatMessagesList.scrollTop() - _MAX_MESSAGES_ON_CHAT * 22.5) / 22.5);
+    return (amount > 0) ? amount : 0;
 }
 
 /**
