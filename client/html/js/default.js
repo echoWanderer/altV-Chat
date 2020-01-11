@@ -25,6 +25,9 @@ if (_HIDE_INPUT_BAR_ON_BLUR) $(chatInputBar).focusout(() => toggleInputBar(false
 
 // Functions
 function pushMessage(text, color = 'white', gradient = false, icon = false) {
+    if (text.length < 1) return;
+    if (gradient !== false && Array.isArray(gradient) === false) return;
+
     let style = `color:${color};`
 
     if (gradient)
@@ -34,7 +37,8 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
         text = `<i class="fi-${icon}" style="padding-right:2px"></i> ` + text;
 
     chatMessagesList.append(`<div class="chat-message" style="${style}">${text}</div>`);
-    scrollMessagesList('bottom');
+
+    if (!isMessageListScrolledUp()) scrollMessagesList('bottom');
 }
 
 function scrollMessagesList(direction) {
@@ -105,6 +109,8 @@ $(document).ready(() => {
     pushMessage('Billy Holmes says: I will never be this young again. Ever. Oh damn… I just got older.');
     pushMessage('Marcos Murray says: He said he was not there yesterday; however, many people saw him there. I really want to go to work, but I am too sick to drive.');
     pushMessage('Matthew Garrett says: My Mum tries to be cool by saying that she likes all the same things that I do.');
+
+    scrollMessagesList('bottom');
 });
 
 $(document).keyup((event) => {
@@ -136,3 +142,8 @@ $(document).keyup((event) => {
             break;
     }
 });
+
+function isMessageListScrolledUp() {
+    const difference = chatMessagesList.prop('scrollHeight') - chatMessagesList.scrollTop() - _MAX_MESSAGES_ON_CHAT * 22.5;
+    return (difference > 22.5 * 2) ? true : false;
+}
