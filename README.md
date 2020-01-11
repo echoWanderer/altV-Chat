@@ -17,23 +17,21 @@ https://t.me/echoWanderer_altv
 ![](https://i.ibb.co/C7dFgfk/rvc.png)
 * Global and player-based messages
 * Colored messages
+* Icons
+* Gradient message background
 * Commands handling
 * Toggle-able chat box visibility
 * Messages history (scrolling with Arrow keys)
 * Dynamic message length counter
 * Built-in */help* command
 
-## Showcase
+## How it looks?
 ![](https://i.ibb.co/4mtHpc6/2.png)
-![](https://i.ibb.co/mtHmz5s/3.png)
-![](https://i.ibb.co/wKBJp0T/4.png)
-![](https://i.ibb.co/q0MQ55s/5.png)
-![](https://i.ibb.co/T8sT37f/7.png)
 
 ## How to use
 
 You can find all information on wiki page:
-[Main Wiki page](wiki)
+* [Main Wiki page](https://github.com/echoWanderer/altV-Chat/wiki)
 
 ## Known Issues
 1. There is some lag between events, you can see warning messages in server and client console:

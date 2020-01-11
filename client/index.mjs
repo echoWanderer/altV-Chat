@@ -70,8 +70,6 @@ export function hideChat() {
 
 
 alt.on('keyup', key => {
-    alt.log(key);
-    
     // Keys working only when chat is not active
     if (!chatActive) {
         switch (key) {
