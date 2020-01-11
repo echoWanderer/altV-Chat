@@ -3,7 +3,9 @@
 
 *This content is not affiliated with alt:MP Team.*
 
-**[ATTENTION]** After next update (1.0.0) resource will be no longer actively developed. You can still make this resource better by contributing it as pull request will be maintained after all.
+**[ATTENTION]** After next update (1.0.0) resource will be no longer actively developed. You can still make this resource better by contributing it by forking it or making pull request.
+
+Made with **<3** for alt:V community!
 
 ---
 
@@ -15,7 +17,7 @@
 * **Resource Version Control** - Get a message to your server's console when a new update is out!
 ![](https://i.ibb.co/C7dFgfk/rvc.png)
 * Global and player-based messages
-* Colored messages
+* Colored messages (HEX, RGB(A), [CSS Color Codes](https://www.quackit.com/css/css_color_codes.cfm))
 * Icons ([Foundation Icons](https://zurb.com/playground/foundation-icon-fonts-3))
 * Gradient message background
 * Commands handling
