@@ -42,6 +42,16 @@ alt.onServer('chat:activateChat', state => {
     activateChat(state);
 });
 
+export function clearMessages() {
+    webview.emit('chat:clearMessages');
+}
+
+// Backwards compatibility until next update
+export function clearChat(...args) {
+    alt.logWarning('Chat function "clearChat" is deprecated. Consider using "clearMessages" as old one will be removed after next update.');
+    clearMessages(...args);
+}
+
 export function push(text, color = 'white', gradient = false, icon = false) {
     webview.emit('chat:pushMessage', text, color, gradient, icon);
 }

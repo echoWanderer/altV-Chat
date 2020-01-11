@@ -33,6 +33,10 @@ if (_HIDE_INPUT_BAR_ON_BLUR) $(chatInputBar).focusout(() => inputActive && activ
 chatMessagesList.bind('mousewheel DOMMouseScroll', (e) => e.preventDefault());
 chatInputBar.bind('propertychange change click keyup input paste', () => inputActive && setInputBarLengthCounterCurrent(chatInputBar.val().length));
 
+function clearMessages() {
+    chatMessagesList.html('');
+}
+
 // Functions - Actions
 function pushMessage(text, color = 'white', gradient = false, icon = false) {
     if (text.length < 1) return;
@@ -168,6 +172,7 @@ function getScrolledUpMessagesAmount() {
 }
 
 // alt:V - Callbacks
+alt.on('chat:clearMessages', clearMessages);
 alt.on('chat:pushMessage', pushMessage);
 alt.on('chat:activateChat', activateChat);
 alt.on('chat:activateInput', activateInput);
