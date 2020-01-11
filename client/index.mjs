@@ -7,12 +7,12 @@ let chatActive = false;
 let inputActive = false;
 let scrollActive = false;
 
-const webview = new alt.WebView('http://resource/client/html/index.html')
+const webview = new alt.WebView('http://resource/client/html/index.html');
 webview.focus();
 
 webview.on('chat:onLoaded', () => {
     activateChat(true);
-    push('Connected to the server.');
+    push('Connected to the server', 'limegreen', [0, 190, 0], 'check')
 
     for(let i = 0; i < 12; i++)
         push(`i: ${i}`);
@@ -30,11 +30,15 @@ webview.on('chat:onChatStateChange', state => {
 });
 
 webview.on('chat:onInput', message => {
-    push(message);
-})
+    alt.emitServer('chat:onInput', message);
+});
 
-export function push(text) {
-    webview.emit('chat:pushMessage', text);
+alt.onServer('chat:sendMessage', (sender, message) => {
+    push(`${sender} says: ${message}`);
+});
+
+export function push(text, color = 'white', gradient = false, icon = false) {
+    webview.emit('chat:pushMessage', text, color, gradient, icon);
 }
 
 export function icon(name, paddingLeft = 0, paddingRight = 0) {
@@ -82,6 +86,10 @@ alt.on('keyup', key => {
         switch (key) {
             // Enter
             case 13: return sendInput();
+            // ArrowUp
+            case 38: return shiftHistoryUp();
+            // ArrowDown
+            case 40: return shiftHistoryDown();
         }
     }
 });
@@ -95,4 +103,12 @@ function scrollMessagesList(direction) {
 
 function sendInput() {
     webview.emit('chat:sendInput');
+}
+
+function shiftHistoryUp() {
+    webview.emit('chat:shiftHistoryUp');
+}
+
+function shiftHistoryDown() {
+    webview.emit('chat:shiftHistoryDown');
 }
