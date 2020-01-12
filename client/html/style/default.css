@@ -30,7 +30,7 @@ body {
 .chat-box .chat-messages-list .chat-message {
     color: white;
     line-height: 22px;
-    padding-left: 5px;
+    padding-left: 2px;
 }
 
 .chat-box .chat-input-bar {
@@ -50,10 +50,11 @@ body {
 }
 
 .chat-new-messages-warning {
-    background: linear-gradient(90deg,rgba(255, 255, 0, 0.3) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg,rgba(255, 255, 0, 0.3) 0%, rgba(255,255,255,0) 60%);
+    background-size: auto 50%;
     color: rgb(255, 255, 0);
     line-height: 22px;
-    padding-left: 5px;
+    padding-left: 2px;
 }
 
 .hide {
@@ -75,5 +76,5 @@ body {
 }
 
 .icon {
-    padding:0 4px 0 2px;
+    padding:0 8px 0 4px;
 }

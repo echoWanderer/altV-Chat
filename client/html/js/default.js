@@ -45,10 +45,10 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
     let style = `color:${color};`
 
     if (gradient)
-        style += `background:linear-gradient(90deg,rgba(${[gradient[0],gradient[1],gradient[2]]},0.3) 0%, rgba(255,255,255,0) 100%);`;
+        style += `background:linear-gradient(90deg,rgba(${[gradient[0],gradient[1],gradient[2]]},0.3) 0%, rgba(255,255,255,0) 50%);`;
 
     if (icon)
-        text = `<i class="icon fi-${icon}"></i> ` + text;
+        text = `<i class="icon fi-${icon}"></i>` + text;
 
     chatMessagesList.append(`<div class="chat-message stroke" style="${style}">${text}</div>`);
 
