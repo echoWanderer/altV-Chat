@@ -1,21 +1,19 @@
 # alt:V Chat
-**This resource still needs testing and improving. It's not ready to use in production.**
+<p align="center"><img src="https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png"></p>
 
-*This content is not affiliated with alt:MP Team.*
-
-**[ATTENTION]** After next update (1.0.0) resource will be no longer actively developed. You can still make this resource better by contributing it by forking it or making pull request.
-
+**This branch is still in DEVELOPMENT. Use [master](https://github.com/echoWanderer/altV-Chat/tree/master) branch instead!**
 Made with **<3** for alt:V community!
 
+*This content is not affiliated with alt:MP Team.*
 ---
 
 **Useful links**
-* [Resource Changelog](https://github.com/echoWanderer/altV-Chat/blob/master/CHANGELOG.md)
-* [Get all updates on Telegram](https://t.me/echoWanderer_altv)
+* [Changelog](https://github.com/echoWanderer/altV-Chat/blob/master/CHANGELOG.md)
+* [License](https://github.com/echoWanderer/altV-Chat/blob/master/LICENSE.md)
+* [Follow my work on Telegram](https://t.me/echoWanderer_altv)
 
 # Features
-* **Resource Version Control** - Get a message to your server's console when a new update is out!
-![](https://i.ibb.co/C7dFgfk/rvc.png)
+* Message to your console when resource has been updated
 * Global and player-based messages
 * Colored messages (HEX, RGB(A), [CSS Color Codes](https://www.quackit.com/css/css_color_codes.cfm))
 * Icons ([Foundation Icons](https://zurb.com/playground/foundation-icon-fonts-3))
@@ -26,9 +24,6 @@ Made with **<3** for alt:V community!
 * Chat history with *Page Up/Down* keys
 * Dynamic message length counter
 * Built-in */help* command
-
-# How it looks?
-![](https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png)
 
 # How to use
 You can find all information on wiki page:
