@@ -1,12 +1,8 @@
 # alt:V Chat
-<p align="center"><img src="https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png">
+<p align="center"><img src="https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png"></p>
 
 **This branch is still in DEVELOPMENT. Use [master](https://github.com/echoWanderer/altV-Chat/tree/master) branch instead!**
 
-Made with **<3** for alt:V community!
-
-*This content is not affiliated with alt:MP Team.*
-</p>
 ---
 
 **Useful links**
@@ -36,3 +32,8 @@ You can find all information on wiki page:
 * `Event handler at chat:file:///_/chat/server.mjs:5 was too long 16ms`
 * `Event handler at chat:client.mjs:65 was too long 21ms`
 2. ~~Sometimes after reconnecting to server your client halts and few seconds later - crashes.~~
+
+---
+
+Made with **<3** for alt:V community!
+*This content is not affiliated with alt:MP Team.*
