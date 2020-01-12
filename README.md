@@ -3,7 +3,7 @@
 
 **This branch is still in DEVELOPMENT. Use [master](https://github.com/echoWanderer/altV-Chat/tree/master) branch instead!**
 
-# How to use
+# Useful links
 * [Changelog](https://github.com/echoWanderer/altV-Chat/blob/master/CHANGELOG.md)
 * [License](https://github.com/echoWanderer/altV-Chat/blob/master/LICENSE.md)
 * [Follow my work on Telegram](https://t.me/echoWanderer_altv)
