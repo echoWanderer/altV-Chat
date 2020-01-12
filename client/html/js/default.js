@@ -48,13 +48,13 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
         style += `background:linear-gradient(90deg,rgba(${[gradient[0],gradient[1],gradient[2]]},0.3) 0%, rgba(255,255,255,0) 100%);`;
 
     if (icon)
-        text = `<i class="fi-${icon}" style="padding:0 2px 0 2px"></i> ` + text;
+        text = `<i class="icon fi-${icon}"></i> ` + text;
 
     chatMessagesList.append(`<div class="chat-message stroke" style="${style}">${text}</div>`);
 
     // Check if player's chat is scrolled all the way to the bottom. If true, then scroll down for new message to appear,
     // if false, inform player about new message(s).
-    (getScrolledUpMessagesAmount() >= 1) ? toggleWarningText(true) : scrollMessagesList('bottom');
+    (getScrolledUpMessagesAmount() > 1) ? toggleWarningText(true) : scrollMessagesList('bottom');
 }
 
 function scrollMessagesList(direction) {
