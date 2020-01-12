@@ -31,7 +31,7 @@ $(document).ready(() => {
 });
 if (_HIDE_INPUT_BAR_ON_BLUR) $(chatInputBar).focusout(() => inputActive && activateInput(false));
 chatMessagesList.bind('mousewheel DOMMouseScroll', (e) => e.preventDefault());
-chatInputBar.bind('propertychange change click keyup input paste', () => inputActive && setInputBarLengthCounterCurrent(chatInputBar.val().length));
+chatInputBar.bind('propertychange change click keyup input paste', () => inputActive && checkInputBarLength(chatInputBar.val().length));
 
 function clearMessages() {
     chatMessagesList.html('');
@@ -88,7 +88,7 @@ function activateInput(state) {
     inputActive = state;
 
     // Restart Input Bar Length Counter
-    setInputBarLengthCounterCurrent(0);
+    checkInputBarLength(0);
 
     // Restart Input History
     inputHistoryCache = '';
@@ -160,7 +160,13 @@ function toggleWarningText(state) {
     }
 }
 
-function setInputBarLengthCounterCurrent(amount) {
+function checkInputBarLength(amount) {
+    let input = chatInputBar.val();
+    if(input.length > 100 ) {
+        input = input.substr(0, 100);
+        chatInputBar.val(input);
+        return;
+    }
     chatInputBarLength.html(`<i class="fi-pencil" style="padding-right:2px"></i> ${amount}/100`);
 }
 
