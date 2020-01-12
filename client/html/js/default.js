@@ -54,7 +54,7 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
 
     // Check if player's chat is scrolled all the way to the bottom. If true, then scroll down for new message to appear,
     // if false, inform player about new message(s).
-    (getScrolledUpMessagesAmount() >= 4) ? toggleWarningText(true) : scrollMessagesList('bottom');
+    (getScrolledUpMessagesAmount() >= 1) ? toggleWarningText(true) : scrollMessagesList('bottom');
 }
 
 function scrollMessagesList(direction) {
@@ -152,10 +152,10 @@ function shiftHistoryDown() {
 function toggleWarningText(state) {
     switch (state) {
         case true:
-            chatNewMessagesWarning.removeClass('hide');
+            chatNewMessagesWarning.removeClass('animated-hide');
             break;
         case false:
-            chatNewMessagesWarning.addClass('hide');
+            chatNewMessagesWarning.addClass('animated-hide');
             break;
     }
 }
