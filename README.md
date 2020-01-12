@@ -1,10 +1,12 @@
 # alt:V Chat
-<p align="center"><img src="https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png"></p>
+<p align="center"><img src="https://i.ibb.co/y8dxXrw/Annotation-2020-01-11-192952.png">
 
 **This branch is still in DEVELOPMENT. Use [master](https://github.com/echoWanderer/altV-Chat/tree/master) branch instead!**
+
 Made with **<3** for alt:V community!
 
 *This content is not affiliated with alt:MP Team.*
+</p>
 ---
 
 **Useful links**
