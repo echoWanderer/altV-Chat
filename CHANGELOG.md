@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] -2020-00-00
 ## Changed
 Cleaned up HTML and CSS files.
-Reduced gradient background's width by 50%.
+Reduced chat message gradient background width by 50%.
+Reduced warning message gradient background width by 40%.
 Fixed warning's about new messages body height.
 Fixed issue with warning not showing up on new messages when being scrolled up.
 Fixed issue with being able to enter more than 100 characters to input bar.
