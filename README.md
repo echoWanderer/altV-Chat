@@ -38,4 +38,4 @@ You can find all information on wiki page:
 1. There is some lag between events, you can see warning messages in server and client console:
 * `Event handler at chat:file:///_/chat/server.mjs:5 was too long 16ms`
 * `Event handler at chat:client.mjs:65 was too long 21ms`
-2. ~~Sometimes after reconnecting to server your client halts and few seconds later - crashes.~~
+2. Sometimes chat doesn't show up after connecting to the server.
