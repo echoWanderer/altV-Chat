@@ -4,6 +4,10 @@
     font-size: 13px;
 }
 
+:focus {
+    outline: none;
+}
+
 body {
     background-color: transparent;
 }
@@ -34,7 +38,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     width: 70%;
-    outline: none;
     border: none;
 
     height: 40px;
