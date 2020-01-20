@@ -2,9 +2,6 @@
 **This resource still needs testing and improving. It's not ready to use in production.**
 
 *This content is not affiliated with alt:MP Team.*
-
-**[ATTENTION]** After next update (1.0.0) resource will be no longer actively developed. You can still make this resource better by contributing it by forking it or making pull request.
-
 Made with **<3** for alt:V community!
 
 ---
