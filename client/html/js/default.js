@@ -42,6 +42,8 @@ function pushMessage(text, color = 'white', gradient = false, icon = false) {
     if (text.length < 1) return;
     if (gradient !== false && Array.isArray(gradient) === false) return;
 
+    text = text.replace(/[<>]/gi, "");
+
     let style = `color:${color};`
 
     if (gradient)
