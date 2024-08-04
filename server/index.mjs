@@ -104,11 +104,11 @@ if (_LOAD_EXAMPLE_COMMANDS) {
 
     registerCommand('me', (player, text) => {
         sendAll(`${player.name} ${text}`, 'orchid', false, 'sound');
-    }, 1, 'Describes your chracter\'s action.', '[message]');
+    }, 1, 'Describes your character\'s action.', '[message]');
 
     registerCommand('do', (player, text) => {
         sendAll(`${text} (( ${player.name} ))`, 'orchid', false, 'sound');
-    }, 1, 'Describes your chracter\'s or object\'s state.', '[message]');
+    }, 1, 'Describes your character\'s or object\'s state.', '[message]');
 
     registerCommand('ad', (_, text) => {
         sendAll(`[AD] ${text} (Ph. #000000)`, 'limegreen', [0, 140, 0], 'telephone');
